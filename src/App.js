@@ -9,7 +9,7 @@ function App() {
     repo: [],
     error: "",
     page: 1,
-    loading: true
+    loading: true,
   });
   const { page, repo } = state;
 
@@ -47,7 +47,7 @@ function App() {
     setState((prevState) => ({
       ...state,
       page: state.page + page,
-      loading: true
+      loading: true,
     }));
     getData();
   };
@@ -61,7 +61,7 @@ function App() {
       <h1
         style={{ width: "100%", fontFamily: "sans-serif", textAlign: "center" }}
       >
-        Most Starred Trepos
+        Most Starred Repos
       </h1>
       <RepoList repo={state.repo} />
       <Spinner />
